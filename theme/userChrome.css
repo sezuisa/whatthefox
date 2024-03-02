@@ -27,6 +27,10 @@ Quote: https://userChrome.org | https://github.com/topics/userchrome
   border-inline-start: 0px solid color-mix(in srgb, currentColor 25%, transparent) !important; /*removes seperator line between toolbar item and tabs*/
 }
 
+#TabsToolbar .titlebar-buttonbox-container:not(#hack) {
+	display: none !important;
+}
+
 #urlbar-background,#urlbar { /*makes url bar rounded*/
 
   border-radius: 20px !important;
