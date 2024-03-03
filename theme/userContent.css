@@ -9,12 +9,13 @@ This is more CSS code that makes things design-y.
 **/
 
 @charset "UTF-8";
-@-moz-document url("about:newtab"), url("about:home") { /*this modifies the new tab page for cleaner look*/
-  .releasenote { /*makes Support and Release Note invincible*/
+@-moz-document url-prefix("about:home"), url-prefix("about:newtab") { /*this modifies the new tab page for cleaner look*/
+  .releasenote { /*makes Support and Release Note invisible*/
     color: #ffffff00 !important;
   }
   body{
-    background: url(wallpaper.jpg) center/cover no-repeat fixed !important;
+    background: url(wallpaper.jpg) !important;
+    background-size: cover !important;
   }
   .personalize-button { /*makes Settings Button in New Tab Rounded*/
     border: 0;
