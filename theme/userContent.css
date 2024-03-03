@@ -1,29 +1,20 @@
-
-/*************************************************************************************************************************************************************************************************************************************************************
-
-"userContent.css" is a custom CSS file that can be used to specify CSS style rules for Floorp's intenal site using "chrome" privileges.
-For instance, if you want to apply CSS at "about:newtab" and "about:home", you can use the following CSS rule:
-
-***********************************************************************
-@-moz-document url-prefix("about:newtab"), url-prefix("about:home")   *
-                                                                      *
-    /*Write your css*/                                               /*
-                                                                     /*
-                                                                     /*
-/**********************************************************************
-
-NOTE: You can use the userContent.css file without change preferences (about:config)
-
-/************************************************************************************************************************************************************************************************************************************************************
+/**
+_|_|_|_|_|  _|    _|  _|_|_|_|  _|      _|  _|_|_|_|  
+    _|      _|    _|  _|        _|_|  _|_|  _|        
+    _|      _|_|_|_|  _|_|_|    _|  _|  _|  _|_|_|    
+    _|      _|    _|  _|        _|      _|  _|        
+    _|      _|    _|  _|_|_|_|  _|      _|  _|_|_|_|
+----------------------------------------------------
+This is more CSS code that makes things design-y.
+**/
 
 @charset "UTF-8";
-/* Please write your custom CSS under this line*/
-@-moz-document url-prefix("about:newtab"), url-prefix("about:home") { /*this modifies the new tab page for cleaner look*/
-.releasenote { /*makes Support and Release Note invincible*/
+@-moz-document url("about:newtab"), url("about:home") { /*this modifies the new tab page for cleaner look*/
+  .releasenote { /*makes Support and Release Note invincible*/
     color: #ffffff00 !important;
   }
   body{
-    background: url(wallpaper.jpg) !important; background-size: cover !important;
+    background: url(wallpaper.jpg) center/cover no-repeat fixed !important;
   }
   .personalize-button { /*makes Settings Button in New Tab Rounded*/
     border: 0;
