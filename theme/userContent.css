@@ -8,14 +8,16 @@ _|_|_|_|_|  _|    _|  _|_|_|_|  _|      _|  _|_|_|_|
 This is more CSS code that makes things design-y.
 **/
 
-@charset "UTF-8";
+@import url(colors.css);
+
 @-moz-document url-prefix("about:home"), url-prefix("about:newtab") { /*this modifies the new tab page for cleaner look*/
   .releasenote { /*makes Support and Release Note invisible*/
     color: #ffffff00 !important;
   }
   body{
-    background: url(wallpaper.jpg) !important;
-    background-size: cover !important;
+    /* background: url(wallpaper.jpg) !important;
+    background-size: cover !important; */
+    background-color: var(--color-main) !important;
   }
   .personalize-button { /*makes Settings Button in New Tab Rounded*/
     border: 0;
