@@ -94,17 +94,16 @@ This is the main CSS code that makes things design-y.
   }
 
   /* non active tabs have darker text */
-  .tabbrowser-tab:not([visuallyselected='true']):not([multiselected]):not(:hover) .tab-background:not([selected='true']) {
+  .tab-background:not([selected='true']):not([multiselected]) {
     color: var(--color-inactive-text) !important;
   }
 
-  /* megabar */
-  #nav-bar #urlbar[breakout][breakout-extend][open] {
-    background-color: var(--color-main) !important;
-    border-bottom: none !important;
-    border-top: none !important;
-    box-shadow: 0 30px 50px -15px rgba(0,0,0,0.5) !important;
+  #urlbar[breakout][breakout-extend] > #urlbar-background {
+    background-color: var(--color-url-bar-breakout) !important;
+    box-shadow: 0 30px 50px -15px var(--color-url-bar-breakout-shadow) !important;
+    border: none;
   }
+  
 
   #urlbar .urlbar-input-box {
     text-align: center;

@@ -2,5 +2,7 @@
 	--color-main: #2b201f;
 	--color-selected: #5e4746;
     --color-url-bar: #331f19;
+    --color-url-bar-breakout: #1e1616;
+    --color-url-bar-breakout-shadow: #1e16169f;
     --color-inactive-text: #916e60;
 }
