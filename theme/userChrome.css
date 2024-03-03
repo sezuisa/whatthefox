@@ -10,29 +10,29 @@ This is the main CSS code that makes things design-y.
 
 @charset "UTF-8";
 @-moz-document url(chrome://browser/content/browser.xhtml) {
-  #fxa-avatar-image {     /*makes your avatar picture larger*/ 
-      width: 25px !important;
-      height: 25px !important;
+  #fxa-avatar-image {
+      border-radius: 20px !important;
   }
   :root:not([privatebrowsingmode="temporary"], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser-tabs, :root[privatebrowsingmode="temporary"]:not([firefoxviewhidden]) :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs {
     border-inline-start: 0px solid color-mix(in srgb, currentColor 25%, transparent) !important; /*removes seperator line between toolbar item and tabs*/
   }
 
   #urlbar-background,#urlbar { /*makes url bar rounded*/
-
     border-radius: 20px !important;
   }
+
   .tab-icon-overlay { /*removes audio playing in tab icon*/
     stroke: unset !important;
     fill: unset !important;
     background: unset !important;
     fill-opacity: 0 !important;
   }
+
   :root {
     --tab-border-radius: 20px !important;   /* makes tabs rounded */
     --toolbarbutton-border-radius: 15px !important; /*makes floorp icon in toolbar rounded */
-
   }
+
   .tab-background {    /*seperate the tabs by a small margin since they were close to eachother*/
     margin-left: 1px !important; 
     margin-right: 1px !important;
@@ -44,9 +44,7 @@ This is the main CSS code that makes things design-y.
 #appcontent browser {
     border-radius: 15px !important;
     margin: 5px 5px 5px 5px !important;
-    border: 2px solid rgba(0, 0, 0, 0);
-    transition: border 0.3s ease;
-    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px 0px rgba(0,0,0,0.3);
 }
 
 /* Remove search engines from the search/url bar */
@@ -59,6 +57,7 @@ This is the main CSS code that makes things design-y.
   border-bottom: none !important;
   border-top: none !important;
   box-shadow: none !important;
+  background-color: rgba(29, 10, 61, 0.5);
 }
 
 #urlbar {
@@ -68,9 +67,7 @@ This is the main CSS code that makes things design-y.
 #nav-bar #urlbar[breakout][breakout-extend][open] {
   border-bottom: none !important;
   border-top: none !important;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
-  rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
-  rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+  box-shadow: 0 30px 50px -15px rgba(0,0,0,0.5) !important;
 }
 
 #nav-bar #search-container #searchbar {
