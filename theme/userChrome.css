@@ -87,12 +87,6 @@ This is the main CSS code that makes things design-y.
   min-height: 30px !important;
   }
 
-  /* #nav-bar #urlbar[breakout][breakout-extend][open] {
-  border-bottom: none !important;
-  border-top: none !important;
-  box-shadow: 0 30px 50px -15px rgba(0,0,0,0.5) !important;
-  } */
-
   #nav-bar #search-container #searchbar {
   border-bottom: none !important;
   border-top: none !important;
@@ -100,34 +94,16 @@ This is the main CSS code that makes things design-y.
   }
 
   /* non active tabs have darker text */
-  .tabbrowser-tab:not([visuallyselected='true']):not([multiselected]):not(
-    :hover
-  ) {
+  .tabbrowser-tab:not([visuallyselected='true']):not([multiselected]):not(:hover) .tab-background:not([selected='true']) {
     color: var(--color-inactive-text) !important;
   }
 
   /* megabar */
-  #urlbar[breakout][breakout-extend][open] {
+  #nav-bar #urlbar[breakout][breakout-extend][open] {
     background-color: var(--color-main) !important;
     border-bottom: none !important;
     border-top: none !important;
     box-shadow: 0 30px 50px -15px rgba(0,0,0,0.5) !important;
-  }
-
-  #urlbar[breakout][breakout-extend] > #urlbar-input-container,
-  #urlbar-input-container {
-    height: var(--urlbar-height) !important;
-    padding-block: 0px !important;
-    padding-inline: 0px !important;
-    transition: none !important;
-  }
-
-  #urlbar[breakout][breakout-extend] {
-    top: calc(
-      (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
-    ) !important;
-    left: 0 !important;
-    width: 100% !important;
   }
 
   #urlbar .urlbar-input-box {
