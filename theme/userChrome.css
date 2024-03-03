@@ -103,7 +103,6 @@ This is the main CSS code that makes things design-y.
     box-shadow: 0 30px 50px -15px var(--color-url-bar-breakout-shadow) !important;
     border: none;
   }
-  
 
   #urlbar .urlbar-input-box {
     text-align: center;
@@ -111,6 +110,11 @@ This is the main CSS code that makes things design-y.
 
   #wrapper-urlbar-container #urlbar {
     height: var(--urlbar-height) !important;
+  }
+
+  #urlbar[focused="true"] > #urlbar-background,
+  #searchbar:focus-within {
+    background-color: var(--color-url-bar) !important;
   }
 
   #tabbrowser-tabs .tabbrowser-tab .tab-background[multiselected='true'] {
