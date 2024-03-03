@@ -10,21 +10,31 @@ This is more CSS code that makes things design-y.
 
 @import url(colors.css);
 
-@-moz-document url-prefix("about:home"), url-prefix("about:newtab") { /*this modifies the new tab page for cleaner look*/
+@-moz-document url("about:home"),
+url("about:blank"),
+url("about:newtab") { /*this modifies the new tab page for cleaner look*/
   .releasenote { /*makes Support and Release Note invisible*/
     color: #ffffff00 !important;
   }
-  body{
-    /* background: url(wallpaper.jpg) !important;
-    background-size: cover !important; */
-    background-color: var(--color-main) !important;
-  }
+
+  body::before {
+		content: '';
+		z-index: -1;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: var(--color-main) no-repeat url(wallpaper.jpg) center;
+		background-size: cover;
+		width: 100vw;
+		height: 100vh;
+	}
+  
   .personalize-button { /*makes Settings Button in New Tab Rounded*/
     border: 0;
     border-radius: 20px !important;
     background-color: transparent;
     padding: 15px;
-    background-color: color-mix(in srgb, var(--newtab-background-color) 50%, transparent);
+    background-color: color-mix(in srgb, var(--newtab-background-colorn) 50%, transparent);
     border: 1px solid rgba(0, 0, 0, 0) !important;
   }
 }
