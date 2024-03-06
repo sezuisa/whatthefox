@@ -8,14 +8,14 @@ _|_|_|_|_|  _|    _|  _|_|_|_|  _|      _|  _|_|_|_|
 This is more CSS code that makes things design-y.
 **/
 
-@import url(whatthefox/theme/colors.css);
+@import url(colors.css);
 
 @-moz-document url("about:home"),
 url("about:blank"),
 url("about:newtab") { /*this modifies the new tab page for cleaner look*/
 
   body {
-		background-image: url(whatthefox/theme/wallpaper.jpg) !important;
+		background-image: url(wallpaper.jpg) !important;
 		background-size: cover !important;
 		background-repeat: no-repeat !important;
     background-attachment: fixed !important;
