@@ -13,7 +13,8 @@ This CSS modifies the new tab page.
 
 @-moz-document url("about:home"),
 url("about:blank"),
-url("about:newtab") { 
+url("about:newtab"),
+url(about:privatebrowsing) { 
 
   body {
 		background-image: url(images/wallpaper.jpg) !important;
@@ -21,9 +22,7 @@ url("about:newtab") {
 		background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-position-x: center !important;
-    background-position-y: center !important;
-    filter: blur(12px);
-    -webkit-filter: blur(12px);
+    background-position-y: top !important;
     --newtab-background-color: var(--color-newtab) !important;
     --newtab-background-color-secondary: var(--color-main) !important;
     --newtab-element-hover-color: color-mix(in srgb, var(--color-main), transparent 50%) !important;
