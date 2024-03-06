@@ -137,57 +137,20 @@ This is the main CSS code that makes things design-y.
     background-color: var(--color-main) !important;
   }
 
-  @-moz-document url("about:home"),
-url("about:blank"),
-url("about:newtab") { /*this modifies the new tab page for cleaner look*/
-  .releasenote { /*makes Support and Release Note invisible*/
-    color: #ffffff00 !important;
-  }
-
-  body::before {
-		content: '';
-		z-index: -1;
-		position: fixed;
-		top: 0;
-		left: 0;
-		background: var(--color-main) no-repeat url(wallpaper.jpg) center;
-		background-size: cover;
-		width: 100vw;
-		height: 100vh;
-	}
-  
-  .personalize-button { /*makes Settings Button in New Tab Rounded*/
-    border: 0;
-    border-radius: 20px !important;
-    background-color: transparent;
-    padding: 15px;
-    background-color: color-mix(in srgb, var(--newtab-background-colorn) 50%, transparent);
-    border: 1px solid rgba(0, 0, 0, 0) !important;
-  }
-}
-
-  /* .toolbar-menupopup {
-    --panel-background: var(--color-main) !important;
-  } */
-
-  :root[lwt-newtab-brighttext] {
-    /* --newtab-background-color: var(--color-newtab) !important; */
+  /* :root[lwt-newtab-brighttext] {
+    --newtab-background-color: var(--color-newtab) !important;
     --newtab-background-color-secondary: var(--color-main) !important;
     background: var(--color-newtab) no-repeat url(wallpaper.jpg) center;
 		background-size: cover;
 		width: 100vw;
 		height: 100vh;
-  }
-
-  :is(menupopup, panel):where([type="arrow"]) {
-    --arrowpanel-background: var(--color-main) !important;
-  }
+  } */
 
   menupopup, panel {
     --panel-background: var(--color-main) !important;
   }
 
-  /* popup.css, menu-shared.css 
-    search for appmenu in html
-  */
+  :is(menupopup, panel):where([type="arrow"]) {
+    --arrowpanel-background: var(--color-main) !important;
+  }
 }

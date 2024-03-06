@@ -13,28 +13,25 @@ This is more CSS code that makes things design-y.
 @-moz-document url("about:home"),
 url("about:blank"),
 url("about:newtab") { /*this modifies the new tab page for cleaner look*/
-  .releasenote { /*makes Support and Release Note invisible*/
-    color: #ffffff00 !important;
-  }
 
   body::before {
-		content: '';
-		z-index: -1;
-		position: fixed;
-		top: 0;
-		left: 0;
-		background: var(--color-main) no-repeat url(wallpaper.jpg) center;
-		background-size: cover;
-		width: 100vw;
-		height: 100vh;
+		background-image: url(wallpaper.jpg) !important;
+		background-size: cover !important;
+		background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position-x: center !important;
+    background-position-y: center !important;
+    /* --newtab-background-color: var(--color-newtab) !important;
+    --newtab-background-color-secondary: var(--color-main) !important; */
+    --newtab-element-hover-color: color-mix(in srgb, var(--color-main), transparent 80%) !important;
 	}
-  
-  .personalize-button { /*makes Settings Button in New Tab Rounded*/
-    border: 0;
+
+  button.personalize-button {
+    border: 0 !important;
     border-radius: 20px !important;
-    background-color: transparent;
-    padding: 15px;
-    background-color: color-mix(in srgb, var(--newtab-background-colorn) 50%, transparent);
+    background-color: transparent !important;
+    padding: 15px !important;
+    background-color: color-mix(in srgb, var(--color-main), transparent 50%) !important;
     border: 1px solid rgba(0, 0, 0, 0) !important;
   }
 }
