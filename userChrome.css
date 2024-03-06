@@ -74,22 +74,40 @@ This is the main CSS code that makes things design-y.
     display:none !important;
   }
 
-  /* Remove border from search bar */
   #nav-bar #urlbar {
     border-bottom: none !important;
     border-top: none !important;
     box-shadow: none !important;
-    background-color: var(--color-url-bar) !important;
+    background: transparent !important;
   }
 
   #urlbar {
     min-height: 30px !important;
   }
 
+  #urlbar-background {
+    background-color: var(--color-url-bar) !important;
+  }
+
   #nav-bar #search-container #searchbar {
     border-bottom: none !important;
     border-top: none !important;
     box-shadow: none !important;
+  }
+
+  #urlbar[breakout][breakout-extend] > #urlbar-background {
+    background: var(--gradient-url-bar) !important;
+    box-shadow: 0 30px 50px -15px var(--color-url-bar-breakout-shadow) !important;
+    border: none !important;
+  }
+
+  #wrapper-urlbar-container #urlbar {
+    height: var(--urlbar-height) !important;
+  }
+
+  #urlbar[focused="true"] > #urlbar-background,
+  #searchbar:focus-within {
+    background-color: var(--color-url-bar) !important;
   }
 
   #TabsToolbar #firefox-view-button:not([open]) > .toolbarbutton-icon,
@@ -105,21 +123,6 @@ This is the main CSS code that makes things design-y.
   #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon,
   .tab-background:is([selected], [multiselected]) {
     background-color: var(--color-selected) !important;
-  }
-
-  #urlbar[breakout][breakout-extend] > #urlbar-background {
-    background-color: linear-gradient(180deg, rgba(38,23,19,1) 0%, rgba(88,65,63,1) 100%) !important;
-    box-shadow: 0 30px 50px -15px var(--color-url-bar-breakout-shadow) !important;
-    border: none;
-  }
-
-  #wrapper-urlbar-container #urlbar {
-    height: var(--urlbar-height) !important;
-  }
-
-  #urlbar[focused="true"] > #urlbar-background,
-  #searchbar:focus-within {
-    background-color: var(--color-url-bar) !important;
   }
 
   #tabbrowser-tabs .tabbrowser-tab .tab-background[multiselected='true'] {
@@ -147,6 +150,6 @@ This is the main CSS code that makes things design-y.
   }
 
   :is(menupopup, panel):where([type="arrow"]) {
-    --arrowpanel-background: linear-gradient(180deg, rgba(38,23,19,1) 0%, rgba(88,65,63,1) 51%, rgba(148,104,85,1) 100%) !important;
+    --arrowpanel-background: var(--gradient-url-bar) !important;
   }
 }

@@ -2,9 +2,10 @@
     --color-accent: #ac6a56;
 	--color-main: #2b201f;
 	--color-selected: #7c584d;
-    --color-url-bar: #331f19;
-    --color-url-bar-breakout: #1e1616;
+    --color-url-bar: #241611;
+    --color-url-bar-secondary: #5b433f;
     --color-url-bar-breakout-shadow: #1e16169f;
     --color-inactive-text: #916e60;
     --color-newtab: #443332;
+    --gradient-url-bar: linear-gradient(180deg, var(--color-url-bar) 0%, var(--color-url-bar-secondary) 100%);
 }

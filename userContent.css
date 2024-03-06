@@ -28,6 +28,8 @@ url("about:privatebrowsing") {
     --newtab-element-hover-color: color-mix(in srgb, var(--color-main), transparent 50%) !important;
     --toolbar-field-focus-border-color: var(--color-accent) !important;
     --focus-outline-color: var(--color-accent) !important;
+    --newtab-primary-action-background: var(--color-accent);
+    --newtab-primary-action-background-pocket: var(--color-accent);
 	}
 
   button.personalize-button {
@@ -36,7 +38,6 @@ url("about:privatebrowsing") {
     padding: 15px !important;
     background-color: color-mix(in srgb, var(--color-main), transparent 50%) !important;
     border: 1px solid rgba(0, 0, 0, 0) !important;
-    backdrop-filter: blur(12px) !important;
   }
 
   button.personalize-button:hover {
@@ -45,22 +46,18 @@ url("about:privatebrowsing") {
 
   .search-wrapper .search-handoff-button,
   .search-wrapper input {
-    background: color-mix(in srgb, var(--color-main), transparent 70%) !important;
-    backdrop-filter: blur(12px) !important;
+    background: color-mix(in srgb, var(--color-main), transparent 50%) !important;
   }
 
   .top-site-outer .tile {
-    background-color: color-mix(in srgb, var(--color-main), transparent 70%) !important;
-    backdrop-filter: blur(12px) !important;
+    background-color: color-mix(in srgb, var(--color-main), transparent 50%) !important;
   }
 
-  .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+    .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
     background-color: color-mix(in srgb, var(--color-main), transparent 70%) !important;
-    backdrop-filter: blur(12px) !important;
   }
 
   .customize-menu {
-    background-color: color-mix(in srgb, var(--color-main), transparent 20%) !important;
-    backdrop-filter: blur(12px) !important;
+    background-color: color-mix(in srgb, var(--color-main), transparent 10%) !important;
   }
 }
