@@ -7,9 +7,4 @@
     --color-url-bar-breakout-shadow: #1e16169f;
     --color-inactive-text: #916e60;
     --color-newtab: #443332;
-
-    --arrowpanel-background: var(--color-main) !important;
-    --panel-background: var(--color-main) !important;
-    --newtab-background-color: var(--color-newtaby) !important;
-    --newtab-background-color-secondary: var(--color-main) !important;
 }

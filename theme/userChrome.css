@@ -170,16 +170,22 @@ url("about:newtab") { /*this modifies the new tab page for cleaner look*/
     --panel-background: var(--color-main) !important;
   } */
 
-  /* :root[lwt-newtab-brighttext] {
-    
-  } */
+  :root[lwt-newtab-brighttext] {
+    /* --newtab-background-color: var(--color-newtab) !important; */
+    --newtab-background-color-secondary: var(--color-main) !important;
+    background: var(--color-newtab) no-repeat url(wallpaper.jpg) center;
+		background-size: cover;
+		width: 100vw;
+		height: 100vh;
+  }
 
-  /* :is(menupopup, panel):where([type="arrow"]) {
-  } */
+  :is(menupopup, panel):where([type="arrow"]) {
+    --arrowpanel-background: var(--color-main) !important;
+  }
 
-  /* menupopup, panel {
+  menupopup, panel {
     --panel-background: var(--color-main) !important;
-  } */
+  }
 
   /* popup.css, menu-shared.css 
     search for appmenu in html
