@@ -18,8 +18,16 @@ This is the main CSS code that makes things design-y.
     border-inline-start: 0px solid color-mix(in srgb, currentColor 25%, transparent) !important; /*removes seperator line between toolbar item and tabs*/
   }
 
+  :root {
+    --tab-border-radius: 20px !important;   /* makes tabs rounded */
+    --toolbarbutton-border-radius: 15px !important; /*makes floorp icon in toolbar rounded */
+    --tab-selected-bgcolor: var(--color-selected) !important;
+    --newtab-background-color: var(--color-newtab) !important;
+  }
+
   #urlbar-background,#urlbar { /*makes url bar rounded*/
     border-radius: 20px !important;
+    accent-color: var(--color-accent) !important;
   }
 
   .tab-icon-overlay { /*removes audio playing in tab icon*/
@@ -29,13 +37,6 @@ This is the main CSS code that makes things design-y.
     fill-opacity: 0 !important;
   }
 
-  :root {
-    --tab-border-radius: 20px !important;   /* makes tabs rounded */
-    --toolbarbutton-border-radius: 15px !important; /*makes floorp icon in toolbar rounded */
-    --tab-selected-bgcolor: var(--color-selected) !important;
-    --newtab-background-color: var(--color-main) !important;
-  }
-
   /* ----- Remove tab bar spacer ----- */
   .titlebar-spacer {
 	  display: none !important;
@@ -43,14 +44,8 @@ This is the main CSS code that makes things design-y.
 
   /* ----- Avoids white flash ----- */
   #tabbrowser-tabpanels {
-	  background-color: var(--uc-light-bkgnd-color, var(--color-main)) !important;
+	  background-color: var(--color-main, var(--color-main)) !important;
   } 
-
-  /* ----- bookmarks items centering ----- */
-  #PlacesToolbarItems {
-	  display: flex !important;
-	  justify-content: center !important;
-  }
 
   .tab-background {    /*seperate the tabs by a small margin since they were close to eachother*/
     margin-left: 1px !important; 
@@ -72,28 +67,28 @@ This is the main CSS code that makes things design-y.
 
   /* Remove search engines from the search/url bar */
   #urlbar .search-one-offs:not([hidden]) {
-  display:none !important;
+    display:none !important;
   }
 
   /* Remove border from search bar */
   #nav-bar #urlbar {
-  border-bottom: none !important;
-  border-top: none !important;
-  box-shadow: none !important;
-  background-color: var(--color-url-bar);
+    border-bottom: none !important;
+    border-top: none !important;
+    box-shadow: none !important;
+    background-color: var(--color-url-bar);
   }
 
   #urlbar {
-  min-height: 30px !important;
+    min-height: 30px !important;
   }
 
   #nav-bar #search-container #searchbar {
-  border-bottom: none !important;
-  border-top: none !important;
-  box-shadow: none !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    box-shadow: none !important;
   }
 
-  /* non active tabs have darker text */
+  /* TODO: non active tabs have darker text */
   .tab-background:not([selected='true']):not([multiselected]) {
     color: var(--color-inactive-text) !important;
   }
@@ -102,10 +97,6 @@ This is the main CSS code that makes things design-y.
     background-color: var(--color-url-bar-breakout) !important;
     box-shadow: 0 30px 50px -15px var(--color-url-bar-breakout-shadow) !important;
     border: none;
-  }
-
-  #urlbar .urlbar-input-box {
-    text-align: center;
   }
 
   #wrapper-urlbar-container #urlbar {

@@ -1,5 +1,5 @@
 :root {
-    accent-color: #ac6a56 !important;
+    --color-accent: #ac6a56;
 	--color-main: #2b201f;
 	--color-selected: #5e4746;
     --color-url-bar: #331f19;

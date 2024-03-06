@@ -14,7 +14,7 @@ This is more CSS code that makes things design-y.
 url("about:blank"),
 url("about:newtab") { /*this modifies the new tab page for cleaner look*/
 
-  body::before {
+  body {
 		background-image: url(wallpaper.jpg) !important;
 		background-size: cover !important;
 		background-repeat: no-repeat !important;
