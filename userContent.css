@@ -5,25 +5,28 @@ _|_|_|_|_|  _|    _|  _|_|_|_|  _|      _|  _|_|_|_|
     _|      _|    _|  _|        _|      _|  _|        
     _|      _|    _|  _|_|_|_|  _|      _|  _|_|_|_|
 ----------------------------------------------------
-This is more CSS code that makes things design-y.
+This CSS modifies the new tab page.
 **/
 
 @import url(colors.css);
 
+
 @-moz-document url("about:home"),
 url("about:blank"),
-url("about:newtab") { /*this modifies the new tab page for cleaner look*/
+url("about:newtab") { 
 
   body {
-		background-image: url(wallpaper.jpg) !important;
+		background-image: url(images/wallpaper.jpg) !important;
 		background-size: cover !important;
 		background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-position-x: center !important;
     background-position-y: center !important;
-    /* --newtab-background-color: var(--color-newtab) !important;
-    --newtab-background-color-secondary: var(--color-main) !important; */
-    --newtab-element-hover-color: color-mix(in srgb, var(--color-main), transparent 80%) !important;
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+    --newtab-background-color: var(--color-newtab) !important;
+    --newtab-background-color-secondary: var(--color-main) !important;
+    --newtab-element-hover-color: color-mix(in srgb, var(--color-main), transparent 50%) !important;
 	}
 
   button.personalize-button {
@@ -33,5 +36,9 @@ url("about:newtab") { /*this modifies the new tab page for cleaner look*/
     padding: 15px !important;
     background-color: color-mix(in srgb, var(--color-main), transparent 50%) !important;
     border: 1px solid rgba(0, 0, 0, 0) !important;
+  }
+
+  button.personalize-button:hover {
+    background-color: color-mix(in srgb, var(--color-selected), transparent 50%) !important;
   }
 }
