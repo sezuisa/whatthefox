@@ -58,7 +58,7 @@ This is the main CSS code that makes things design-y.
 
   #navigator-toolbox {
     background-color: var(--color-main) !important;
-    border-bottom: none;
+    border-bottom: none !important;
   }
 
   /*------------------------ Browser Border ------------------------*/
@@ -66,7 +66,7 @@ This is the main CSS code that makes things design-y.
   #appcontent browser {
     border-radius: 15px !important;
     margin: 5px 5px 5px 5px !important;
-    box-shadow: 0 0 10px 0px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px 0px rgba(0,0,0,0.3) !important;
   }
 
   /* Remove search engines from the search/url bar */
@@ -79,7 +79,7 @@ This is the main CSS code that makes things design-y.
     border-bottom: none !important;
     border-top: none !important;
     box-shadow: none !important;
-    background-color: var(--color-url-bar);
+    background-color: var(--color-url-bar) !important;
   }
 
   #urlbar {
@@ -92,18 +92,19 @@ This is the main CSS code that makes things design-y.
     box-shadow: none !important;
   }
 
-  .tab-background:not([selected], [multiselected]) {
+  #TabsToolbar #firefox-view-button:not([open]) > .toolbarbutton-icon,
+  .tabbrowser-tab > .tab-stack > .tab-background:not([selected], [multiselected]) {
     color: var(--color-inactive-text) !important;
   }
 
   #TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon,
   .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected], [multiselected]) {
-    background-color: color-mix(in srgb, currentColor 25%, transparent);
+    background-color: color-mix(in srgb, currentColor 25%, transparent) !important;
   }
 
   #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon,
   .tab-background:is([selected], [multiselected]) {
-    background-color: var(--color-selected);
+    background-color: var(--color-selected) !important;
   }
 
   #urlbar[breakout][breakout-extend] > #urlbar-background {
